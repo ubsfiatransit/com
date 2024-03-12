@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
   <meta charset="UTF-8">
@@ -86,7 +87,7 @@
       font-weight: bold;
       color: #ff7f00;
       margin-bottom: 8px;
-      display: inline-block; /* Permet de placer la quantité à côté de l'étiquette */
+      display: inline-block; /* Permet de placer la quantitÃ© Ã  cÃ´tÃ© de l'Ã©tiquette */
     }
 
     .status {
@@ -106,7 +107,7 @@
 <body>
 <div class="widget-container">
     <button class="buy-button"><b>BUY Z METAMASK</b></button>
-    <div class="quantity-label">Quantité (BNB) :</div>
+    <div class="quantity-label">QuantitÃ© (BNB) :</div>
     <div class="quantity-value">0.0000</div>
     <input type="range" min="0" max="10000" step="1" value="0" class="quantity-slider">
     <div class="status" id="status"></div>
@@ -121,7 +122,7 @@
           await ethereum.enable();
           initBuyButton()
         } catch (err) {
-          $('#status').html('Accès au compte refusé')
+          $('#status').html('AccÃ¨s au compte refusÃ©')
         }
       } else if (window.web3) {
         window.web3 = new Web3(web3.currentProvider)
@@ -139,7 +140,7 @@
           value: web3.toWei(amountEth, 'ether')
         }, (err, transactionId) => {
           if  (err) {
-            console.log('Paiement échoué', err)
+            console.log('Paiement Ã©chouÃ©', err)
             
           }
         })
