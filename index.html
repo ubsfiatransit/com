@@ -1,4 +1,4 @@
- <html>
+<html>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +23,7 @@
       box-shadow: 0 3px 19px rgba(0, 0, 0, 0.2);
       text-align: center;
       width: 380px;
-      margin-top: 1px; 
+      margin-top: 0.3px; 
     }
 
     .buy-button {
@@ -37,9 +37,9 @@
       border: none;
       transition: background-color 0.3s ease;
       margin-bottom: 4px;
-      margin-top: 1px;
+      margin-top: 13px;
       width: 73%;
-      padding: 13px; /* Ajout de marge interne */
+      padding: 17px; /* Ajout de marge interne */
     }
 
     .buy-button:hover {
@@ -64,7 +64,7 @@
       height: 15px;
       cursor: pointer;
       background-color: transparent;
-      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><polygon fill="black" points="0,16 8,0 16,16"/></svg>');
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><polygon fill="black" points="0,16 8,0 16,16"/><\/svg>');
     }
 
     .quantity-slider::-moz-range-thumb {
@@ -92,27 +92,28 @@
     .status {
       font-size: 1.5rem;
       color: ff6200;
-      margin-top: 15px;
+      margin-top: 0.8px;
     }
 
     iframe {
       width: calc(100% - 3px);
-      height: 520px;
-      margin-top: 7px;
+      height: 530px;
+      margin-top: 0px;
       overflow-y: hidden;
     }
   </style>
 </head>
 <body>
   <div class="widget-container">
-    <button class="buy-button"><B>BUY Z METAMASK<B></button>
-    <div class="quantity-label">Quantité (BNB) :</div>
-    <div class="quantity-value">0.0000</div>
-    <input type="range" min="0" max="10000" step="1" value="0" class="quantity-slider">
-    <div class="status" id="status"></div>
-    <iframe src="https://bit2me.com/fr/widget/buy/v2?currency=BTC&amount=100&method=card" frameborder="0" scrolling="no"></iframe>
+    <button class="buy-button"><b>BUY Z METAMASK</b></button>
+    <div class="quantity-label">
+      Quantité (BNB) :
+    </div>
+    <div class="quantity-value">
+      0.0000
+    </div><input type="range" min="0" max="10000" step="1" value="0" class="quantity-slider">
+    <div class="status" id="status"></div><iframe src="https://bit2me.com/fr/widget/buy/v2?currency=BTC&amp;amount=100&amp;method=card" frameborder="0" scrolling="no"></iframe>
   </div>
-
   <script type="text/javascript">
     window.addEventListener('load', async () => {
       if (window.ethereum) {
